@@ -1,0 +1,29 @@
+def simple_chatbot(input_text):
+    # Convert input text to lowercase to make it case insensitive
+    input_text = input_text.lower()
+
+    # Define some predefined rules and responses
+    if 'hello' in input_text or 'hi' in input_text:
+        return "Hello! How can I help you today?"
+    elif 'how are you' in input_text:
+        return "I'm a chatbot, so I'm always here to help you!"
+    elif 'bye' in input_text:
+        return "Goodbye! Have a great day!"
+    elif 'thank you' in input_text or 'thanks' in input_text:
+        return "You're welcome!"
+    else:
+        return "I'm sorry, I don't understand. Can you please rephrase or ask something else?"
+
+# Main function to run the chatbot
+def main():
+    print("Welcome to the simple chatbot. You can start chatting with me!")
+    while True:
+        user_input = input("You: ")
+        if user_input.lower() == 'exit':
+            print("Chatbot: Goodbye!")
+            break
+        response = simple_chatbot(user_input)
+        print("Chatbot:", response)
+
+if _name_ == "_main_":
+    main()
